@@ -5,5 +5,6 @@ import postMiddleware from '../middlewares/post.middlewares.js';
 const PostRouter = express.Router();
 
 PostRouter.post('/',postMiddleware.newPost ,postController.newPost);
+PostRouter.put('/:id', postMiddleware.updatePost, postController.updatePost );
 
 export default PostRouter;
